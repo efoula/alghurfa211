@@ -1,0 +1,182 @@
+/*
+Theme Name: AlGhurfa 211
+Theme URI: http://efoula.com
+Version: 1.0
+Description: A book about Libya's culture and arts
+Author: Eslam Foula
+Author URI: http://efoula.com
+Tags: responsive, white, bootstrap
+
+License: Attribution-ShareAlike 3.0 Unported (CC BYsummer_offer-SA 3.0)
+License URI: http://creativecommons.org/licenses/by-sa/3.0/
+
+This simple theme was built using the example Bootstrap theme "Basic marketing site" found on the Bootstrap web site http://twitter.github.com/bootstrap/examples/hero.html
+*/
+/*@import url('bootstrap/css/bootstrap.css'); 
+@import url('bootstrap/css/bootstrap-responsive.css'); */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+html {
+  /* height: 100%;
+  overflow-x: hidden; */
+  scroll-behavior: smooth;
+}
+
+#section-1 .owl-prev,
+#section-1 .owl-next {
+  @apply bg-primary lg:w-[60px] lg:h-[60px] w-[35px] h-[35px] rounded-full flex items-center justify-center text-black lg:text-2xl text-lg;
+}
+
+#section-1 .owl-prev {
+  @apply absolute -translate-y-1/2 lg:left-0 -left-10 top-1/2;
+}
+#section-1 .owl-next {
+  @apply absolute -translate-y-1/2 lg:right-0 -right-10 top-1/2;
+}
+.owl-carousel .owl-dots {
+  @apply flex items-center justify-between gap-2 mt-5;
+}
+.owl-carousel .owl-dot {
+  @apply !bg-gray-300 w-[50px] h-[5px] rounded-full flex-1;
+}
+.owl-carousel .owl-dot.active {
+  @apply !bg-primary;
+}
+
+#section-3 .owl-stage {
+  padding-right: 0 !important;
+}
+
+#circles-section .owl-item.center > a {
+  @apply !bg-white;
+}
+/* odd vs  */
+
+.archive-filter-list {
+  display: none;
+  z-index: 10;
+}
+
+.archive-filter-item.active .archive-filter-list {
+  display: block;
+}
+
+.overlay {
+  display: none;
+}§
+.overlay.active {
+  display: block;
+}
+.paginate-item.active {
+  @apply !bg-primary;
+}
+
+.menu-list.active {
+  @apply top-0;
+}
+.filter-menu.active {
+  @apply bottom-0;
+}
+.menu-list {
+  @apply shadow-lg shadow-transparent;
+}
+.header-sticky .menu-list {
+  @apply shadow-lg shadow-[#00000068];
+}
+
+.header-sticky {
+  @apply fixed w-full md:relative md:w-auto z-50 shadow-lg shadow-[#0000005b] md:shadow-none;
+}
+
+/*div#multicolumn1 {
+ -moz-column-count: 2;
+ -moz-column-gap: 20px;
+ -webkit-column-count: 2;
+ -webkit-column-gap: 20px;
+ column-count: 2;
+ column-gap: 20px;
+}*/
+
+div#multicolumn1 p {
+  display: inline-block;
+  margin-left: 30px;
+  text-align: right;
+  float: right;
+  width: 40%;
+}
+
+
+.cvf-pagination-nav {
+    width: 100%;
+    padding-top: 40px
+}
+
+.cvf-pagination-nav ul {
+    direction: rtl;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.cvf-pagination-nav li {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #F3F3F3;
+    color: #000000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-family: Noto Sans Arabic, sans-serif;
+    font-size: 17px;
+    cursor: pointer;
+    font-weight: 600;
+}
+  
+.cvf-pagination-nav li.selected, .cvf-pagination-nav li:hover {
+    background-color: #FCEA10;
+}
+
+.cvf-pagination-nav li+li {
+    margin-right: 10px;
+}
+
+.cvf-pagination-nav li:first-child,
+.cvf-pagination-nav li:nth-child(2),
+.cvf-pagination-nav li:last-child,
+.cvf-pagination-nav li:nth-last-child(2) {
+    font-size: 17px;
+}
+
+.animated-background {
+  opacity: 25%;
+  -webkit-animation: fadeInFromNone 0.5s ease-out;
+  -moz-animation: fadeInFromNone 0.5s ease-out;
+  -o-animation: fadeInFromNone 0.5s ease-out;
+  animation: fadeInFromNone 0.5s ease-out;
+}
+
+
+
