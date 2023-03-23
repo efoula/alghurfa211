@@ -3,6 +3,9 @@
 <!-- Footer Starter -->
 <?php
 $social_links = get_option('social_links_theme_options');
+$fb_url = '';
+$tw_url = '';
+$ig_url = '';
 if (!empty($social_links['fb_link'])) {
     $fb_url = $social_links['fb_link'];
 }
@@ -53,8 +56,8 @@ if (!empty($social_links['ig_link'])) {
                     class="px-4 py-3 rounded-full bg-primary w-[347px] text-lg placeholder:text-lg text-black placeholder:text-black outline-none"
                     placeholder="برجاء إدخال بريدك الإلكتروني ........" />
                 <div class="flex items-center gap-5 pr-4 mt-6">
-                    <?php if($GLOBALS[ 'ig_url' ]) { ?>
-                        <a target="_blank" href="<?php echo $GLOBALS[ 'ig_url' ]; ?>">
+                    <?php if($ig_url) { ?>
+                        <a target="_blank" href="<?php echo $ig_url; ?>">
                         <svg width="31" height="30" viewBox="0 0 31 30" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_86_561)">
@@ -75,8 +78,8 @@ if (!empty($social_links['ig_link'])) {
                             </defs>
                         </svg></a>
                     <?php } ?>
-                    <?php if($GLOBALS[ 'tw_url' ]) { ?>
-                        <a target="_blank" href="<?php echo $GLOBALS[ 'tw_url' ]; ?>">
+                    <?php if($tw_url) { ?>
+                        <a target="_blank" href="<?php echo $tw_url; ?>">
                         <svg width="31" height="30" viewBox="0 0 31 30" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_86_560)">
@@ -91,8 +94,8 @@ if (!empty($social_links['ig_link'])) {
                             </defs>
                         </svg></a>
                     <?php } ?>
-                    <?php if($GLOBALS[ 'fb_url' ]) { ?>
-                        <a target="_blank" href="<?php echo $GLOBALS[ 'fb_url' ]; ?>">
+                    <?php if($fb_url) { ?>
+                        <a target="_blank" href="<?php echo $fb_url; ?>">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_86_559)">
