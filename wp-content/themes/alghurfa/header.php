@@ -17,10 +17,14 @@ var site_url = "<? get_permalink(5); ?>";
 
 <?php
 $social_links = get_option('social_links_theme_options');
+$fb_url = '';
+$tw_url = '';
+$ig_url = '';
 if (!empty($social_links['fb_link'])) {
     $fb_url = $social_links['fb_link'];
     $GLOBALS[ 'fb_url' ] = $fb_url;
 }
+
 if (!empty($social_links['tw_link'])) {
     $tw_url = $social_links['tw_link'];
     $GLOBALS[ 'tw_url' ] = $tw_url;
@@ -246,11 +250,6 @@ if (!empty($social_links['ig_link'])) {
 
         <main class="flex-1">
         <div class="m-container mx-auto max-w-[1375px] sm:px-10 px-4 2xl:px-0">
-
-            <?php 
-                 
-                print_r($post_types);
-            ?>
 
 
 	
