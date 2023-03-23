@@ -55,18 +55,18 @@ $get_issue_posttypes = get_posttypes_of_issue($defult_issue_id);
 
 			if($p_layout == 'layout_1') { 
 				$perpage = 4; 
-				echo '<div class="overflow-hidden owl-carousel" id="section-3">';
+				echo '<div class="overflow-hidden owl-carousel owl-carousel-layout1">';
 			} elseif($p_layout == 'layout_2') {
 				$perpage = 1;
 			}elseif($p_layout == 'layout_3') {
 				$perpage = 4;
 				echo '<div class="relative flex-1 w-full overflow-hidden">
-                    <div class="owl-carousel" id="section-correspondence">';
+                    <div class="owl-carousel owl-carousel-layout2">';
 			}elseif($p_layout == 'layout_4') {
 				$perpage = 1;
 			}elseif($p_layout == 'layout_5') {
 				$perpage = 2;
-				echo '<div class="overflow-hidden owl-carousel" id="circles-section">';
+				echo '<div class="overflow-hidden owl-carousel owl-carousel-layout3">';
 			}elseif($p_layout == 'layout_6') {
 				$perpage = 1;
 			}

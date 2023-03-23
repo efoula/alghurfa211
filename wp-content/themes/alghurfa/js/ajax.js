@@ -176,7 +176,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
 
 // owl carousel load
 function owl_load() {
-  jQuery("#section-3").owlCarousel({
+  jQuery(".owl-carousel-layout1").owlCarousel({
     items: 2,
     nav: false,
     loop: false,
@@ -196,7 +196,7 @@ function owl_load() {
     },
   });
 
-  jQuery("#section-correspondence").owlCarousel({
+  jQuery(".owl-carousel-layout2").owlCarousel({
     items: 3,
     rtl: true,
     dots: false,
@@ -216,7 +216,7 @@ function owl_load() {
     },
   });
 
-  jQuery("#circles-section").owlCarousel({
+  jQuery(".owl-carousel-layout3").owlCarousel({
     items: 3,
     rtl: true,
     loop: false,
