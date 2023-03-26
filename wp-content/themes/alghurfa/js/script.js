@@ -1,5 +1,4 @@
-jQuery(document).ready(function($) { 
-
+jQuery(document).ready(function ($) {
   // on page load scroll into section from url
 
   $(window).scroll(function () {
@@ -14,14 +13,17 @@ jQuery(document).ready(function($) {
       $(".logo-yellow").removeClass("!h-[45px] !ml-[260px]");
     }
   });
-  
+
   $(".archive-filter-item").click(function () {
     $(".archive-filter-item").removeClass("active !bg-primary");
     $(this).addClass("active !bg-primary");
     $(".overlay").addClass("active");
   });
   $(document).click(function (e) {
-    if (!$(e.target).closest(".archive-filter-item").length) {
+    if (
+      !$(e.target).closest(".archive-filter-item").length ||
+      $(e.target).closest(".archive-filter-list a").length
+    ) {
       $(".archive-filter-item").removeClass("active !bg-primary");
       $(".overlay").removeClass("active");
     }
@@ -51,7 +53,6 @@ jQuery(document).ready(function($) {
   //   var foula_var = $(this).parents('button.archive-filter-item').attr('id');
   //   console.log(foula_var);
   // });
-
 
   ////////////////////////////////////////////////////////////////////////////////
 
