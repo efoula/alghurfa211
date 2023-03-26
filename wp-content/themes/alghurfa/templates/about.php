@@ -76,7 +76,7 @@ $page_img = wp_get_attachment_image_url(get_post_thumbnail_id($page_id), 'large'
             الغرفة
             211
             عن طريق</h5>
-        <img src="<?php echo $page_img; ?>" alt="about" class="mx-auto">
+        <img src="<?php echo $page_img; ?>" alt="about" class="mx-auto lg:max-w-[300px]">
         <div class="flex items-center justify-center gap-5 pr-4 mt-3">
             <?php if($GLOBALS[ 'ig_url' ]) { ?>
               <a target="_blank" href="<?php echo $GLOBALS[ 'ig_url' ]; ?>">

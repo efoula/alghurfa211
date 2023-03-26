@@ -33,10 +33,10 @@ $collaborator_name = get_term( $collaborator_id )->name;
     <h3 class="mt-12 mb-8 text-xl font-extrabold text-center lg:text-3xl">
         <?php echo get_the_title(); ?>
     </h3>
-    <p class="font-cairo font-light md:text-2xl text-base text-black mb-4 text-center"><?php echo $collaborator_name; ?></p>
+    <p class="mb-4 text-base font-light text-center text-black font-cairo md:text-2xl"><?php echo $collaborator_name; ?></p>
     <div class="relative flex flex-col items-start gap-4 lg:flex-row">
         <a <?php if ( is_a( $next_post, 'WP_Post' ) ) { echo 'href="'.$next_post_url.'"';} else {echo 'style="pointer-events: none"';}?>
-            class="text-[#9F9F9F] lg:text-2xl text-lg font-extrabold flex items-center lg:gap-16 gap-10 lg:flex-col lg:mt-10 order-2 lg:order-1 flex-row self-center lg:self-auto transition hover:text-black">
+            class="text-[#9F9F9F] lg:text-2xl text-lg font-extrabold flex items-center lg:gap-16 gap-10 lg:flex-col lg:mt-[200px] order-2 lg:order-1 flex-row self-center lg:self-auto transition hover:text-black">
             <i class="rotate-90 fas fa-arrow-up"></i>
             <span class="lg:rotate-90">النص التالي</span>
             <i class="rotate-90 fas fa-arrow-up"></i>
@@ -46,7 +46,7 @@ $collaborator_name = get_term( $collaborator_id )->name;
            <div id="multicolumn1" class="flex-1 text-sm font-light !leading-loose lg:text-xl font-Amiri"><?php echo $content; ?></div>
         </div>
         <a <?php if ( is_a( $previous_post, 'WP_Post' ) ) { echo 'href="'.$previous_post_url.'"';} else {echo 'style="pointer-events: none"';}?>
-            class="text-[#9F9F9F] lg:text-2xl text-lg font-extrabold flex items-center lg:gap-16 gap-10 lg:flex-col lg:mt-10 order-3 lg:order-3 flex-row self-center lg:self-auto transition hover:text-black">
+            class="text-[#9F9F9F] lg:text-2xl text-lg font-extrabold flex items-center lg:gap-16 gap-10 lg:flex-col lg:mt-[200px] order-3 lg:order-3 flex-row self-center lg:self-auto transition hover:text-black">
             <i class="-rotate-90 fas fa-arrow-up"></i>
             <span class="lg:-rotate-90">النص السابق</span>
             <i class="-rotate-90 fas fa-arrow-up"></i>
