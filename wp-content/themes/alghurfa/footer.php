@@ -49,15 +49,30 @@ if (!empty($social_links['ig_link'])) {
             </div>
             <div>
                 <h3 class="mb-6 font-bold text-primary text-main">التواصل معنا</h3>
-                <a href="#" class="text-[#ddcd0e] font-medium text-main mb-6 block">
-                    مصر
-                </a>
-                <a href="#" class="text-[#ddcd0e] font-medium text-main mb-6 block">
-                    ليبيا
-                </a>
-                <a href="#" class="text-[#ddcd0e] font-medium text-main mb-6 block">
-                    أونلاين
-                </a>
+                <ul class="flex flex-col gap-3">
+                    <li>
+                        <a href="<?php echo get_permalink(44); ?>" class="text-[#ddcd0e] font-medium text-lg">
+                            <?php echo get_the_title(44); ?>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo get_permalink(7); ?>" class="text-[#ddcd0e] font-medium text-lg">
+                            <?php echo get_the_title(7); ?>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo get_permalink(5); ?>" class="text-[#ddcd0e] font-medium text-lg">
+                            <?php echo get_the_title(5); ?>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="<?php //echo get_permalink(9); 
+                                    ?>" class="text-[#ddcd0e] font-medium text-lg">
+                            <?php //echo get_the_title(9); 
+                            ?>
+                        </a>
+                    </li> -->
+                </ul>
 
                 <div class="flex items-center gap-5 pr-4 mt-8">
                     <?php if ($ig_url) { ?>

@@ -1043,6 +1043,10 @@ video {
   width: full;
 }
 
+.w-\[70\%\] {
+  width: 70%;
+}
+
 .max-w-\[1375px\] {
   max-width: 1375px;
 }
@@ -2340,6 +2344,10 @@ div#multicolumn1 p {
     width: 1px;
   }
 
+  .lg\:w-\[70\%\] {
+    width: 70%;
+  }
+
   .lg\:max-w-\[300px\] {
     max-width: 300px;
   }
@@ -2538,6 +2546,19 @@ div#multicolumn1 p {
 
   .lg\:text-\[33px\] {
     font-size: 33px;
+  }
+
+  .lg\:text-\[40px\] {
+    font-size: 40px;
+  }
+
+  .lg\:text-\[27px\] {
+    font-size: 27px;
+  }
+
+  .lg\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
   .lg\:font-light {
