@@ -10,6 +10,7 @@ $collaborators = get_collaborators_exist();
 $post_types = get_all_posttypes();
 
 // get URL parameters to set ajax content
+$url_issue_id = $url_subject = $url_collaborator = $url_cur_page = '';
 $url_issue_id = $_GET['issue'];
 $url_subject = $_GET['subject'];
 $url_collaborator = $_GET['collaborator'];
