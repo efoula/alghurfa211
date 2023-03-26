@@ -10,6 +10,11 @@
     <?php $current_id = get_the_id(); ?>
 </head>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo&family=Noto+Sans+Arabic:wght@300;400;600;800&display=swap"rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Droid+Sans" />
+
 <script type="text/javascript">
 var ajax_handler = "<?php echo get_template_directory_uri() . '/templates/ajax-handler.php' ?>";
 var site_url = "<? get_permalink(5); ?>";
