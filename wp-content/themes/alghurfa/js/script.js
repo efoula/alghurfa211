@@ -6,11 +6,11 @@ jQuery(document).ready(function ($) {
     const logo = $(".logo-brand").height();
 
     if ($(this).scrollTop() > logo + 50) {
-      $(".logo-yellow").addClass("!h-[45px] !ml-[260px]");
+      $(".logo-yellow").addClass("!h-[45px]");
       $("header").addClass("header-sticky");
     } else if ($(this).scrollTop() == 0) {
       $("header").removeClass("header-sticky");
-      $(".logo-yellow").removeClass("!h-[45px] !ml-[260px]");
+      $(".logo-yellow").removeClass("!h-[45px]");
     }
   });
 
@@ -42,7 +42,7 @@ jQuery(document).ready(function ($) {
   });
 
   // Close filter menu
-  $(".close-filter-menu").click(function () {
+  $(".close-filter-menu, .archive-filter-list a").click(function () {
     $(".filter-menu").removeClass("active");
   });
 

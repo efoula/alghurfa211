@@ -47,7 +47,7 @@ $get_issue_posttypes = get_posttypes_of_issue($defult_issue_id);
 if ($get_issue_posttypes) {
 	foreach ($get_issue_posttypes as $issue_post_type) {
 		$p_layout = get_term_meta($defult_issue_id, 'dlayout_' . $issue_post_type . '', true);
-		echo '<section class="flex flex-col xl:flex-row items-center xl:gap-[50px] gap-8 lg:mb-0 mb-8 lg:pt-24" id="' . $issue_post_type . '">
+		echo '<section class="flex flex-col xl:flex-row items-center xl:gap-[50px] gap-8 lg:mb-0 lg:pt-24 mb-14" id="' . $issue_post_type . '">
                 <a href="#" class=" text-2xl font-extrabold text-center md:text-[25px] md:text-start font-notoSans
                 text-dark">' . get_long_titles($issue_post_type) . '</a>';
 
@@ -112,7 +112,7 @@ if ($get_issue_posttypes) {
 
 				<!-- Section 4 Starter layout_2 -->
 				<div class="flex flex-col flex-1 -mx-4 lg:flex-row xl:items-end lg:mx-0">
-					<a href="#" class="contents relative">
+					<a href="#" class="relative contents">
 						<img src="<?php echo $p_img_portrait; ?>" class="relative z-10 lg:mb-10 lg:rounded-[20px]">
 					</a>
 					<div class="bg-light-gray lg:rounded-[20px] font-droid text-justify after:hidden lg:p-12 p-6 lg:text-2xl !rounded-br-none !rounded-tr-none text-lg lg:!leading-10 relative after:bg-light-gray after:w-[200px] after:lg:block after:absolute after:top-0 after:left-full after:h-full after:rounded-br-[20px]"><?php echo $p_excerpt; ?></div>
@@ -140,7 +140,7 @@ if ($get_issue_posttypes) {
 						<a href="<?php echo $p_permalink; ?>" class="relative flex-1 py-3 text-center lg:flex-none lg:text-start lg:px-10 bg-primary lg:py-0 lg:bg-white rounded-[10px] lg:rounded-none"><?php echo $p_nme; ?></a>
 						<span class="bg-primary rounded-[10px] h-[23px] flex-1 hidden lg:block"></span>
 					</h3>
-					<p class="mt-4 text-base font-normal text-justify text-black lg:mt-6 lg:font-light font-droid lg:text-2xl lg:leading-loose"><?php echo $p_excerpt; ?></p>
+					<p class="mt-4 text-2xl font-normal text-justify text-black lg:mt-6 lg:font-light font-droid lg:leading-loose"><?php echo $p_excerpt; ?></p>
 				</div>
 				<!-- Section 6 End -->
 
@@ -148,7 +148,7 @@ if ($get_issue_posttypes) {
 
 				<!-- Section 7 Starter layout_5 -->
 
-				<a href="<?php echo $p_permalink; ?>" class="lg:w-[330px] w-[180px] h-[180px] lg:h-[330px] rounded-full border-[10px] border-primary bg-primary hover:bg-white transition flex items-center justify-center px-6 font-extrabold lg:text-2xl text-xl text-black text-center"><?php echo $p_nme; ?></a>
+				<a href="<?php echo $p_permalink; ?>" class="lg:w-[330px] w-[300px] h-[300px] lg:h-[330px] rounded-full border-[10px] border-primary bg-primary hover:bg-white transition flex items-center justify-center px-6 font-extrabold lg:text-2xl text-xl text-black text-center"><?php echo $p_nme; ?></a>
 
 				<!-- Section 7 End -->
 

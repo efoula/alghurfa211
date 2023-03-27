@@ -97,7 +97,7 @@ if (!empty($social_links['ig_link'])) {
                     <a href="" class="text-lg <?php if($current_id == 11) {echo 'font-semibold'; } ?> md:pr-[13px] after:bg-primary after:w-px after:h-[15px] relative after:block after:absolute after:right-0 flex items-center md:text-primary">تبرع</a>
                 </div>
                 <a href="<?php echo get_bloginfo('url'); ?>"
-                    class="h-0 overflow-hidden transition-[height] ml-[260px] duration-500 ease-in-out logo-yellow">
+                    class="h-0 overflow-hidden transition-[height] duration-500 ease-in-out logo-yellow absolute left-1/2 -translate-x-1/2">
                     <svg width="164" height="45" viewBox="0 0 164 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_368_175)">
                             <path d="M75.621 6.09921H66.3418L63.2378 11.6603H72.4052L75.621 6.09921Z" fill="#FCEA10" />
@@ -135,10 +135,7 @@ if (!empty($social_links['ig_link'])) {
 
                 <div class="mt-8 mb-5 text-center md:hidden">
                     <span class="bg-black h-0.5 rounded-[10px] w-full mb-7 block"></span>
-                    <h3 class="mb-3 text-sm font-light text-dark">اشترك في النشرة الأخبارية</h3>
-                    <input
-                        class="rounded-[20px] bg-black text-primary placeholder:text-primary w-full py-2 px-4  outline-none text-center"
-                        type="email" placeholder="برجاء إدخال بريدك الإلكتروني ........">
+             
                 </div>
                 <!-- Social Icons -->
                 <div class="flex items-center justify-center gap-5">

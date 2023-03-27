@@ -35,7 +35,7 @@ $collaborator_name = get_term($collaborator_id)->name;
     </h3>
     <p class="mb-8 text-base font-light text-center text-black font-cairo md:text-2xl"><?php echo $collaborator_name; ?></p>
     <div class="relative flex flex-col items-start gap-4">
-        <div class="flex flex-row items-center justify-center flex-1 gap-5 lg:gap-8 ">
+        <div class="flex flex-col items-center justify-center flex-1 w-full gap-5 lg:flex-row lg:gap-8 ">
             <a <?php if (is_a($next_post, 'WP_Post')) {
                     echo 'href="' . $next_post_url . '"';
                 } else {
@@ -45,7 +45,7 @@ $collaborator_name = get_term($collaborator_id)->name;
                 <span class="lg:rotate-90">النص التالي</span>
                 <i class="rotate-90 fas fa-arrow-up"></i>
             </a>
-            <img src="<?php echo $post_img_large; ?>" alt="">
+            <img src="<?php echo $post_img_large; ?>" alt="" class="max-w-[850px]">
             <a <?php if (is_a($previous_post, 'WP_Post')) {
                     echo 'href="' . $previous_post_url . '"';
                 } else {
@@ -60,7 +60,7 @@ $collaborator_name = get_term($collaborator_id)->name;
         <!-- <div class="flex flex-col justify-center flex-1 order-1 gap-5 lg:gap-8 lg:order-2">
             
         </div> -->
-        <div class="flex items-center justify-center lg:w-[70%] mx-auto">
+        <div class="flex items-center justify-center lg:w-[60%] mx-auto">
             <div id="multicolumn1" class="flex-1 text-sm font-light !leading-loose lg:text-xl font-Amiri"><?php echo $content; ?></div>
         </div>
 
