@@ -47,16 +47,13 @@ if (isset($_GET['cur_page'])) {
       </svg>
     </button>
     <!-- Issues button component -->
-    <div class="relative w-full lg:w-auto contents lg:block">
-      <button class="text-right archive-filter-item md:w-[330px] w-full shadow-md md:text-main text-lg font-extrabold px-6 py-3 rounded-[10px] bg-[#F3F3F3] transition-all ease-in-out duration-300 issues_button">
-        <div class="flex items-center justify-between">
-          <span>الأعداد</span>
-          <!-- chevron down -->
-          <i class="fas fa-chevron-down"></i>
-        </div>
-
-      </button>
-      <div class="archive-filter-list issues_drop_menu w-full pt-4 pb-6 shadow-lg border-[3px] border-primary rounded-[10px] px-3 offset-y divide-y-[5px] divide-[#F3F3F3] lg:mt-8 bg-white right-0 lg:absolute">
+    <button class="relative text-right archive-filter-item md:w-[330px] w-full shadow-md md:text-main text-lg font-extrabold px-6 py-3 rounded-[10px] bg-[#F3F3F3] transition-all ease-in-out duration-300 issues_button">
+      <div class="flex items-center justify-between">
+        <span>الأعداد</span>
+        <!-- chevron down -->
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="archive-filter-list issues_drop_menu w-full pt-4 pb-6 shadow-lg border-[3px] border-primary rounded-[10px] px-3 offset-y absolute mt-8 bg-white right-0">
         <ul class="pr-8 list-disc">
           <?php
           if ($issues) {
@@ -77,19 +74,15 @@ if (isset($_GET['cur_page'])) {
           } ?>
         </ul>
       </div>
-    </div>
-
+    </button>
     <!-- Subjects button component -->
-    <div class="relative w-full lg:w-auto contents lg:block">
-      <button class="text-right archive-filter-item md:w-[330px] w-full shadow-md md:text-main text-lg font-extrabold px-6 py-3 rounded-[10px] bg-[#F3F3F3] transition-all ease-in-out duration-300" id="issue_posttypes" data-defaultname="المواضيع" data-selected="">
-        <div class="flex items-center justify-between">
-          <span>المواضيع</span>
-          <!-- chevron down -->
-          <i class="fas fa-chevron-down"></i>
-        </div>
-
-      </button>
-      <div class="archive-filter-list w-full pt-4 pb-6 shadow-lg border-[3px] border-primary rounded-[10px] px-3 offset-y divide-y-[5px] divide-[#F3F3F3] lg:mt-8 bg-white right-0 lg:absolute">
+    <button class="relative text-right archive-filter-item md:w-[330px] w-full shadow-md md:text-main text-lg font-extrabold px-6 py-3 rounded-[10px] bg-[#F3F3F3] transition-all ease-in-out duration-300" id="issue_posttypes" data-defaultname="المواضيع" data-selected="">
+      <div class="flex items-center justify-between">
+        <span>المواضيع</span>
+        <!-- chevron down -->
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="archive-filter-list w-full pt-4 pb-6 shadow-lg border-[3px] border-primary rounded-[10px] px-3 offset-y divide-y-[5px] divide-[#F3F3F3] absolute mt-8 bg-white right-0">
         <!-- Repeat this item with loop -->
 
         <ul class="pr-8 list-disc">
@@ -110,17 +103,15 @@ if (isset($_GET['cur_page'])) {
         </ul>
 
       </div>
-    </div>
+    </button>
     <!-- Authors button component -->
-    <div class="relative w-full lg:w-auto contents lg:block">
-      <button class="text-right archive-filter-item md:w-[330px] w-full shadow-md md:text-main text-lg font-extrabold px-6 py-3 rounded-[10px] bg-[#F3F3F3] transition-all ease-in-out duration-300" id="collaborators" data-defaultname="المشاركين">
-        <div class="flex items-center justify-between">
-          <span>المشاركين</span>
-          <!-- chevron down -->
-          <i class="fas fa-chevron-down"></i>
-        </div>
-      </button>
-      <div class="archive-filter-list w-full pt-4 pb-6 shadow-lg border-[3px] border-primary rounded-[10px] px-3 offset-y divide-y-[5px] divide-[#F3F3F3] lg:absolute lg:mt-8 bg-white right-0">
+    <button class="relative text-right archive-filter-item md:w-[330px] w-full shadow-md md:text-main text-lg font-extrabold px-6 py-3 rounded-[10px] bg-[#F3F3F3] transition-all ease-in-out duration-300" id="collaborators" data-defaultname="المشاركين">
+      <div class="flex items-center justify-between">
+        <span>المشاركين</span>
+        <!-- chevron down -->
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="archive-filter-list w-full pt-4 pb-6 shadow-lg border-[3px] border-primary rounded-[10px] px-3 offset-y divide-y-[5px] divide-[#F3F3F3] absolute mt-8 bg-white right-0">
         <!-- Repeat this item with loop -->
 
         <ul class="pr-8 list-disc">
@@ -144,12 +135,12 @@ if (isset($_GET['cur_page'])) {
         </ul>
 
       </div>
-    </div>
+    </button>
   </div>
   <!-- Columns list component -->
-  <div class="relative">
+  <div class="relative -mx-6 lg:mx-0">
     <div class="absolute top-0 left-0 w-full h-full bg-white overlay bg-opacity-80"></div>
-    <div class="flex flex-col lg:divide-y-[10px] lg:divide-[#F3F3F3] gap-[60px] lg:gap-0 ajax-content">
+    <div class="flex flex-col gap-[60px] lg:gap-0 ajax-content">
 
       <!-- first display content - most recent posts from all post types -->
       <?php

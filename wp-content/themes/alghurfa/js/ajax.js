@@ -69,7 +69,7 @@ function reset_collaborator_button() {
 }
 
 function get_post_types() {
-  jQuery("#issue_posttypes + .archive-filter-list ul li a").click(function () {
+  jQuery("#issue_posttypes ul li a").click(function () {
     jQuery(".ajax-content").addClass("animated-background");
 
     // rename button subjects / post types on select
