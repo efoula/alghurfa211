@@ -138,7 +138,7 @@ if (isset($_GET['cur_page'])) {
     </button>
   </div>
   <!-- Columns list component -->
-  <div class="relative -mx-6 lg:mx-0">
+  <div class="relative">
     <div class="absolute top-0 left-0 w-full h-full bg-white overlay bg-opacity-80"></div>
     <div class="flex flex-col gap-[60px] lg:gap-0 ajax-content">
 
