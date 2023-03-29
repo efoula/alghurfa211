@@ -5,7 +5,7 @@
 function add_theme_scripts() {
 	wp_enqueue_script("jquery");
 	wp_enqueue_style( 'style-dev', get_template_directory_uri() . '/style.css', array(), '1');
-	wp_enqueue_style( 'output', get_template_directory_uri() . '/css/output.css', array(), '1');
+	// wp_enqueue_style( 'output', get_template_directory_uri() . '/css/output.css', array(), '1');
 	wp_enqueue_style( 'owl-carousel-min', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css');
 	// wp_enqueue_style( 'cairo', 'https://fonts.googleapis.com/css2?family=Cairo&family=Noto+Sans+Arabic:wght@300;400;600;800&display=swap&family=Amiri&display=swap');
 	wp_enqueue_script( 'fontawesome', 'https://kit.fontawesome.com/2c36e9b7b1.js');
@@ -651,7 +651,7 @@ add_image_size( 'post_hero', 960 , 515, array('center')  ); //Post Hero
 function feh_remove_editor() {
    if (isset($_GET['post'])) {	
       $id = $_GET['post'];	
-      $remove_editor_ids = array(44);
+      $remove_editor_ids = array(44, 50);
       foreach($remove_editor_ids as $remove_editor_id) {
          if (in_array($id, $remove_editor_ids)) {
             remove_post_type_support('page', 'editor');
@@ -1055,6 +1055,73 @@ function get_registered_post_types() {
   
   return $post_types;
 }
+////////////////////////////////////////////////////////////////////////
+
+///////////////////////////// add distribution page custom meta boxes
+add_action( 'cmb2_admin_init', 'distribute_dynamic_content' );
+function distribute_dynamic_content() {
+  $prefix = '_distributecont_';
+
+  $distrib_cmb_content = new_cmb2_box( array(
+    'id'           => $prefix . 'distcont',
+    'title'        => 'Distributors',
+    'object_types' => array( 'page' ), // post type
+    'show_on'      => array( 'key'=> 'page-template','value' => 'templates/distribution.php' ),
+    'context'      => 'normal',
+    'show_names'   => true,
+    'closed' => false
+  ));
+
+  $group_field_id = $distrib_cmb_content->add_field( array(
+	    'id'          => 'wiki_test_repeat_group',
+	    'type'        => 'group',
+	    'description' => __( 'Generates reusable form entries', 'cmb2' ),
+	    'options'     => array(
+	        'group_title'       => __( 'Entry {#}', 'cmb2' ), 
+	        'add_button'        => __( 'Add Another Entry', 'cmb2' ),
+	        'remove_button'     => __( 'Remove Entry', 'cmb2' ),
+	        'sortable'          => true,
+	    ),
+	));
+
+	$distrib_cmb_content->add_group_field( $group_field_id, array(
+	    'name' => 'Section Name',
+	    'id'   => 'destrib_secname',
+	    'desc' => 'Example: مصر',
+	    'type' => 'text',
+	));
+
+	$distrib_cmb_content->add_group_field( $group_field_id, array(
+	    'name' => 'Name',
+	    'id'   => 'distrib_name',
+	    'desc' => 'Example: مكتبة الشروق',
+	    'type' => 'text',
+	));
+
+	$distrib_cmb_content->add_group_field( $group_field_id, array(
+	    'name' => 'Address',
+	    'id'   => 'distrib_address',
+	    'desc' => 'Example: 70 شارع الفلكي، وسط البلد، القاهرة',
+	    'type' => 'text',
+	));
+
+	$distrib_cmb_content->add_group_field( $group_field_id, array(
+	    'name' => 'Number',
+	    'id'   => 'distrib_phone',
+	    'desc' => 'Example: +201066531221',
+	    'type' => 'text',
+	));
+
+	$distrib_cmb_content->add_group_field( $group_field_id, array(
+	    'name' => 'Website',
+	    'id'   => 'distrib_url',
+	    'desc' => 'Example: https://www.google.com',
+	    'type' => 'text',
+	));
+
+
+}
+////////////////////////////////////////////////////////////////////////
 
 
 

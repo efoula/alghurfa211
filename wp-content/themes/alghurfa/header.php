@@ -92,8 +92,8 @@ if (!empty($social_links['ig_link'])) {
                     <a href="<?php echo get_permalink(5); ?>" class="text-lg <?php if($current_id == 5) {echo 'font-semibold'; } ?> md:pr-[13px] after:bg-primary after:w-px after:h-[15px] relative after:block after:absolute after:right-0 flex items-center md:text-primary">دليل الأعداد</a>
                     <a href="<?php echo get_permalink(7); ?>" class="text-lg <?php if($current_id == 7) {echo 'font-semibold'; } ?> md:pr-[13px] after:bg-primary after:w-px after:h-[15px] relative after:block after:absolute after:right-0 flex items-center md:text-primary">من
                         نحن</a>
-                   <!--  <a href="<?php //echo get_permalink(9); ?>" class="text-lg <?php //if($current_id == 9) {echo 'font-semibold'; } ?> md:pr-[13px] after:bg-primary after:w-px after:h-[15px] relative after:block after:absolute after:right-0 flex items-center md:text-primary">أماكن
-                        التوزيع</a> -->
+                    <a href="<?php echo get_permalink(50); ?>" class="text-lg <?php if($current_id == 50) {echo 'font-semibold'; } ?> md:pr-[13px] after:bg-primary after:w-px after:h-[15px] relative after:block after:absolute after:right-0 flex items-center md:text-primary">أماكن
+                        التوزيع</a>
                     <a href="" class="text-lg <?php if($current_id == 11) {echo 'font-semibold'; } ?> md:pr-[13px] after:bg-primary after:w-px after:h-[15px] relative after:block after:absolute after:right-0 flex items-center md:text-primary">تبرع</a>
                 </div>
                 <a href="<?php echo get_bloginfo('url'); ?>"

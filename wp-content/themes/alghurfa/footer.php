@@ -38,40 +38,33 @@ if (!empty($social_links['ig_link'])) {
                             <?php echo get_the_title(5); ?>
                         </a>
                     </li>
-                    <!-- <li>
-                        <a href="<?php //echo get_permalink(9); 
-                                    ?>" class="text-[#ddcd0e] font-medium text-lg">
-                            <?php //echo get_the_title(9); 
-                            ?>
-                        </a>
-                    </li> -->
                 </ul>
             </div>
             <div>
-                <h3 class="mb-6 font-bold text-primary text-main">التواصل معنا</h3>
+                <h3 class="mb-6 font-bold text-primary text-main">أماكن التوزيع</h3>
                 <ul class="flex flex-col gap-3">
-                    <li>
-                        <a href="<?php echo get_permalink(44); ?>" class="text-[#ddcd0e] font-medium text-lg">
-                            <?php echo get_the_title(44); ?>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="<?php echo get_permalink(7); ?>" class="text-[#ddcd0e] font-medium text-lg">
-                            <?php echo get_the_title(7); ?>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="<?php echo get_permalink(5); ?>" class="text-[#ddcd0e] font-medium text-lg">
-                            <?php echo get_the_title(5); ?>
-                        </a>
-                    </li>
-                    <!-- <li>
-                        <a href="<?php //echo get_permalink(9); 
-                                    ?>" class="text-[#ddcd0e] font-medium text-lg">
-                            <?php //echo get_the_title(9); 
-                            ?>
-                        </a>
-                    </li> -->
+
+                    <?php
+                        $entries = get_post_meta( get_the_ID(), 'wiki_test_repeat_group', true );
+                        $group = array();
+                        foreach ( (array) $entries as $key => $entry ) {
+                            $destrib_secname = '';
+                            if ( isset( $entry['destrib_secname'] ) ) {
+                                $destrib_secname = esc_html( $entry['destrib_secname'] );
+                                $destrib_secname = str_replace(['<p>', '</p>'], '', $destrib_secname);
+                            }
+                            $group[$destrib_secname][] = $entry;
+                        }         
+
+                        foreach($group as $group_single) {
+                            $section_name = $group_single[0]['destrib_secname'];
+                    ?>
+                        <li>
+                            <a href="<?php echo get_permalink(50); ?>" class="text-[#ddcd0e] font-medium text-lg">
+                                <?php echo $section_name; ?>
+                            </a>
+                        </li>
+                    <?php } ?>
                 </ul>
 
                 <div class="flex items-center gap-5 pr-4 mt-8">
